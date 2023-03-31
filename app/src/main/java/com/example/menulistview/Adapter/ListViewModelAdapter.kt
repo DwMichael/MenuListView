@@ -1,50 +1,57 @@
 package com.example.senthil.kotlin_listview.Adapter
 
+import android.app.Activity
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import android.widget.BaseAdapter
 import android.widget.TextView
-import com.example.senthil.kotlin_listview.Model.ListViewModel
-import com.example.senthil.kotlin_listview.R
+import com.example.menulistview.Activity.MainActivity
+import com.example.menulistview.R
 
-class ListViewModelAdapter(val context: Context, val arrayAdapter: ArrayAdapter<String>) : BaseAdapter() {
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View? {
+class SimpleAdapter(private var activity: Activity, private var items: ArrayList<MainActivity.UserDto>) : BaseAdapter() {
+
+    private class ViewHolder(row: View?) {
+        var txtName: TextView? = null
+        var txtComment: TextView? = null
+
+        init {
+            this.txtName = row?.findViewById<TextView>(R.id.tvTitle)
+            this.txtComment = row?.findViewById<TextView>(R.id.tvContent)
+        }
+    }
+
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val view: View?
-        val vh: ViewHolder
-
+        val viewHolder: ViewHolder
         if (convertView == null) {
-            val layoutInflater = LayoutInflater.from(context)
-            view = layoutInflater.inflate(R.layout.list_view_item, parent, false)
-            vh = ViewHolder(view)
-            view.tag = vh
+            val inflater = activity?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+            view = inflater.inflate(R.layout.list_item, null)
+            viewHolder = ViewHolder(view)
+            view?.tag = viewHolder
         } else {
             view = convertView
-            vh = view.tag as ViewHolder
+            viewHolder = view.tag as ViewHolder
         }
 
-        vh.tvTitle.text = arrayAdapter[position].title
-        vh.tvContent.text = arrayAdapter[position].content
-        return view
+        var userDto = items[position]
+        viewHolder.txtName?.text = userDto.name
+        viewHolder.txtComment?.text = userDto.comment
+
+        return view as View
     }
 
-    override fun getItem(position: Int): Any {
-        return listModelArrayList[position]
+    override fun getItem(i: Int): MainActivity.UserDto {
+        return items[i]
     }
 
-    override fun getItemId(position: Int): Long {
-        return position.toLong()
+    override fun getItemId(i: Int): Long {
+        return i.toLong()
     }
 
     override fun getCount(): Int {
-        return listModelArrayList.size
+        return items.size
     }
-}
-
-private class ViewHolder(view: View?) {
-    val tvTitle: TextView = view?.findViewById<TextView>(R.id.tvTitle) as TextView
-    val tvContent: TextView = view?.findViewById<TextView>(R.id.tvContent) as TextView
 }
