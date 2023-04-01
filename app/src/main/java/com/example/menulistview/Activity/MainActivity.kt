@@ -1,7 +1,9 @@
 package com.example.menulistview.Activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.Toast
@@ -25,37 +27,37 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    val buttonClick = findViewById<>(R.id.button_click)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    buttonClick.setOnClickListener {
-        val intent = Intent(this, NewActivity::class.java)
+    //val buttonClick = findViewById<>(R.id.button_click)
+    fun onShowDetail(view: View) {
+        val intent = Intent(this, DetailItemActivity::class.java)
         startActivity(intent)
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     fun generateData(): ArrayList<UserDto> {
         var result = ArrayList<UserDto>()
 

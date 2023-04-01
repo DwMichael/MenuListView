@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:layout_gravity="center_horizontal"-->
+<!--    android:background="@drawable/bg"-->
+<!--    android:orientation="horizontal"-->
+<!--    tools:context=".Activity.MainActivity"-->
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_gravity="center_horizontal"
     android:background="@drawable/bg"
     android:orientation="horizontal"
-    tools:context=".Activity.MainActivity"
-
-    >
+    tools:context=".Activity.MainActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -38,6 +45,10 @@
         app:layout_constraintVertical_bias="0.0"
         android:divider="@android:color/transparent"
         android:dividerHeight="10.0sp"/>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onShowDetail"
+        android:text="@string/detail_button"/>
+</LinearLayout>
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
