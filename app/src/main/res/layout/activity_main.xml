@@ -14,9 +14,10 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_gravity="center_horizontal"
-    android:background="@drawable/bg"
     android:orientation="horizontal"
-    tools:context=".Activity.MainActivity">
+    tools:context=".Activity.MainActivity"
+    android:background="@drawable/bg">
+
 
     <TextView
         android:id="@+id/textView"
@@ -30,6 +31,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.168" />
+    <Button
+        android:id="@+id/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="onShowDetail"
+        android:text="@string/detail_button"/>
 
     <ListView
         android:id="@+id/listView"
@@ -45,10 +55,6 @@
         app:layout_constraintVertical_bias="0.0"
         android:divider="@android:color/transparent"
         android:dividerHeight="10.0sp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onShowDetail"
-        android:text="@string/detail_button"/>
+
 </LinearLayout>
 <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
