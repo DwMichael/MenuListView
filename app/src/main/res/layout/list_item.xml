@@ -6,36 +6,29 @@
     android:id="@+id/listItem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white"
-    android:padding="20dp"
-    android:paddingBottom="12dp">
+    android:background="@drawable/burger"
+    android:scaleType="centerCrop"
+    android:padding="50dp"
+    android:paddingBottom="25dp"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    >
+
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@color/white"
-        android:text="TextView"
-        android:textColor="@color/black"
-        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/white"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvContent"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/tvTitle"
-        app:layout_constraintStart_toStartOf="@+id/tvTitle"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

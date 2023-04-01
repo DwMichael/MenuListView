@@ -7,19 +7,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
-import com.example.menulistview.Activity.MainActivity
+import com.example.menulistview.Model.Dish
 import com.example.menulistview.R
 
-
-class SimpleAdapter(private var activity: Activity, private var items: ArrayList<MainActivity.UserDto>) : BaseAdapter() {
+class SimpleAdapter(private var activity: Activity, private var items: ArrayList<Dish>) : BaseAdapter() {
 
     private class ViewHolder(row: View?) {
         var txtName: TextView? = null
-        var txtComment: TextView? = null
+
+//        var txtRecipe: TextView? = null
 
         init {
             this.txtName = row?.findViewById<TextView>(R.id.tvTitle)
-            this.txtComment = row?.findViewById<TextView>(R.id.tvContent)
+//            this.txtRecipe = row?.findViewById<TextView>(R.id.tvContent)
         }
     }
 
@@ -36,14 +36,14 @@ class SimpleAdapter(private var activity: Activity, private var items: ArrayList
             viewHolder = view.tag as ViewHolder
         }
 
-        var userDto = items[position]
-        viewHolder.txtName?.text = userDto.name
-        viewHolder.txtComment?.text = userDto.comment
+        var dishish = items[position]
+        viewHolder.txtName?.text = dishish.name
+//        viewHolder.txtRecipe?.text = dishish.recipe
 
         return view as View
     }
 
-    override fun getItem(i: Int): MainActivity.UserDto {
+    override fun getItem(i: Int): Dish {
         return items[i]
     }
 
