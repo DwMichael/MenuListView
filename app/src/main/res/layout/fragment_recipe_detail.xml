@@ -15,24 +15,7 @@
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/dish_recipe"
         android:id="@+id/textDescription" />
-    <TextView
-        android:id="@+id/tv_countdown"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="00:00:00"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        />
-    <EditText
-        android:id="@+id/et_duration"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter duration in minutes"
-        android:inputType="number"
-        android:textSize="20sp"
-        />
 </LinearLayout>

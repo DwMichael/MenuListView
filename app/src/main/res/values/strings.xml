@@ -1,8 +1,44 @@
 <resources>
-    <string name="app_name">MenuListView</string>
+    <string name="app_name">Przepisy kulinarne</string>
     <string name="detail_button">Pokaż przpis</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="dish_name">Nazwa przepisu</string>
     <string name="dish_recipe">Składniki i sposób przygotowania</string>
+    <string name="hamburger_title">Hamburger</string>
+    <string name="hamburger_recipe">
+        Instrukcja przygotowania:\n
+        Rozgrzej grill lub patelnię grillową na średnim ogniu\n
+        Przypraw kotleta wołowego solą i pieprzem z obu stron\n
+        Umieść kotleta na grillu i smaż przez 3-4 minuty z każdej strony lub aż uzyska pożądany stopień wypieku.\n
+        W ostatniej minucie smażenia dodaj plaster sera cheddar na wierzch kotleta, aby się rozpuścił.\n
+        Opiecz bułkę do hamburgera na grillu przez 1-2 minuty.\n
+        Na wierzchu i na spodzie bułki rozsmaruj ketchup i musztardę.\n
+        Połóż na spodzie bułki liście sałaty, plastry pomidora i cebuli.\n
+        Na warzywach umieść kotleta wołowego z rozpuszczonym serem na wierzchu.\n
+        Przykryj burger drugą połową bułki
+    </string>
+    <string name="spaghetti_title">Spaghetti</string>
+    <string name="spaghetti_recipe">
+        Instrukcja przygotowania:\n
+        Gotuj makaron zgodnie z instrukcją na opakowaniu.\n
+        Na patelni rozgrzej oliwę i podsmaż czosnek przez około 1 minutę.\n
+        Dodaj mięso mielone i smaż, aż się zrumieni i będzie dobrze ugotowane.\n
+        Dodaj pomidory i pieczarki, a następnie przypraw solą, pieprzem i oregano.\n
+        Gotuj na wolnym ogniu przez około 10-15 minut.\n
+        Wymieszaj sos z makaronem i podawaj gorące.\n
+    </string>
+    <string name="image">Image</string>
+    <string name="start">start</string>
+    <string name="stop">stop</string>
+    <string name="reset">reset</string>
+    <string name="share">Udostępnij</string>
+    <string name="top_image">home</string>
+    <string name="home_tab">Home</string>
+    <string name="kat1_tab">FastFood</string>
+    <string name="kat2_tab">Italian</string>
+    <string name="app_title">Przepisy kuchenne</string>
+    <string name="app_purpose">Dzięki naszej aplikacji użytkownicy będą mogli odkrywać nowe pomysły kulinarne, zarządzać swoimi ulubionymi przepisami oraz dzielić się nimi z innymi pasjonatami gotowania. Nasza aplikacja ma na celu ułatwienie procesu przygotowywania posiłków, inspirację kulinarną i tworzenie społeczności opartej na wspólnej miłości do jedzenia i gotowania.</string>
+    <string name="app_cheers">Smacznego!</string>
+    <string name="action_title">Action Activity</string>
 </resources>

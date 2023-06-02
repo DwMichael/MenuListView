@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity"
+    android:orientation="horizontal"
+    >
+    <include
+        layout="@layout/toolbar_main"
+        android:id="@+id/toolbar" />
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/list_frag"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:name="com.example.menulistview.DishListFragment"
+        tools:layout="@layout/activity_detail"
+        tools:ignore="MissingConstraints"
+        android:layout_width="0dp"/>
+<!--    <fragment
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:name="com.example.menulistview.DishListFragment"
+        android:id="@+id/list_frag"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"/>-->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toEndOf="@+id/list_frag"
+        android:layout_width="0dp"
+        tools:ignore="InconsistentLayout" />
+
+</LinearLayout>
+
+
+
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<fragment
+    xmlns:android=”http://schemas.android.com/apk/res/android”
+    android:name=”com.example.menulistview.DishListFragment”
+    android:layout_width=”match_parent”
+    android:layout_height=„match_parent” />
+-->
+
+
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:layout_gravity="center_horizontal"-->
+<!--    android:background="@drawable/bg"-->
+<!--    android:orientation="horizontal"-->
+<!--    tools:context=".Activity.MainActivity"-->
+<!--<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical"
+    tools:context=".Activity.MainActivity">
+
+    <TextView
+        android:layout_marginTop="70dp"
+        android:layout_gravity="center"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WITAM W MOJEJ KUCHNI"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.168" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="72dp"
+
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintVertical_bias="0.0" />
+    <Button
+        android:id="@+id/detailButton"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onShowDetail"
+        android:text="@string/detail_button"/>
+</LinearLayout>-->
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Dishes" parent="Theme.AppCompat.NoActionBar">
+    <item name="colorPrimary">#005F6A</item>
+    <item name="colorAccent">#FFA500</item>
+    </style>
+</resources>
